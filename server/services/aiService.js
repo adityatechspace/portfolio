@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import portfolioData from "../data/portfolioData.js";
 
+console.log("Gemini API key loaded:", !!process.env.GEMINI_API_KEY);
 
 const genAI = new GoogleGenerativeAI(
   process.env.GEMINI_API_KEY
