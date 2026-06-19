@@ -111,13 +111,14 @@ function ChatBot() {
             />
           </div>
           
-          <div className="space-y-4 h-[400px] overflow-y-auto mb-6" ref={chatContainerRef}>
+          <div className=" chat-scroll space-y-4 h-[400px] overflow-y-auto mb-6" ref={chatContainerRef}>
             {messages.map((msg, index) => (
               <MessageBubble
                 key={index}
                 sender={msg.sender}
                 message={msg.message}
               />
+              
             ))}
 
             {loading && (
