@@ -106,17 +106,21 @@ function Hero() {
           {/* Right Content */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="absolute inset-0 blur-3xl bg-blue-500/20 rounded-full"></div>
+              <div className="relative">
 
-              <img
-                src={profilePicture}
-                alt="Profile"
-                className="relative w-[300px] md:w-[255px] rounded-3xl border border-slate-800 shadow-2xl"
-              />
+  <div className="absolute inset-0 blur-[100px] bg-gradient-to-r from-blue-500/20 via-purple-500/15 to-cyan-500/10 rounded-full scale-125"></div>
 
-              <div className="absolute bottom-5 right-5 px-4 py-2 rounded-full bg-slate-900 border border-slate-700">
-                🟢 Open to Roles
-              </div>
+  <img
+    src={profilePicture}
+    alt="Profile"
+    className="relative w-[300px] md:w-[255px] rounded-3xl opacity-95 shadow-[0_0_50px_rgba(59,130,246,0.2)]"
+  />
+
+  <div className="absolute bottom-5 right-5 px-4 py-2 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700/50 shadow-lg">
+    🟢 Open to Roles
+  </div>
+
+</div>
             </div>
           </div>
         </div>
