@@ -3,7 +3,7 @@ import axios from "axios";
 const API =
   axios.create({
     baseURL:
-      "https://portfolio-zz8d.onrender.com/api",
+      import.meta.env.VITE_API_URL,
   });
 
 export const askAssistant =

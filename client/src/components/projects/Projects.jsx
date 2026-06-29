@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import { projectData } from "./ProjectData";
 
 function Projects() {
   return (
@@ -23,9 +24,12 @@ function Projects() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+         {projectData.map((project) => (
+            <ProjectCard
+              key={project.title}
+              {...project}
+            />
+          ))}
         </div>
       </div>
     </section>
