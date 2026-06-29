@@ -102,14 +102,6 @@ function ChatBot() {
         </div>
 
         <div className="border border-slate-800 rounded-3xl p-6">
-
-          <div className="mb-6">
-            <SuggestedQuestions
-              onQuestionClick={
-                handleSuggestedQuestion
-              }
-            />
-          </div>
           
           <div className=" chat-scroll space-y-4 h-[400px] overflow-y-auto mb-6" ref={chatContainerRef}>
             {messages.map((msg, index) => (
@@ -132,6 +124,8 @@ function ChatBot() {
 )}
           </div>
 
+          <div>
+
           <ChatInput
             value={input}
             onChange={(e) =>
@@ -139,6 +133,15 @@ function ChatBot() {
             }
             onSend={handleSend}
           />
+          </div>
+
+          <div className="mb-6 mt-5">
+            <SuggestedQuestions
+              onQuestionClick={
+                handleSuggestedQuestion
+              }
+            />
+          </div>
 
         </div>
       </div>
