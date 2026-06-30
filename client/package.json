@@ -3,11 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
- "scripts": {
-  "dev": "vite --host",
-  "build": "vite build",
-  "preview": "vite preview"
-},
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "axios": "^1.6.8",
     "framer-motion": "^11.0.0",
@@ -20,6 +20,7 @@
     "react-toastify": "^10.0.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.15",
