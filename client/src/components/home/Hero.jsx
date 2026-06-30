@@ -1,10 +1,12 @@
+
+
 import {
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-  FiGlobe,
-  FiDownload,
-} from "react-icons/fi";
+    FaGithub,
+    FaEnvelope,
+    FaDownload,
+    FaGlobe,
+    FaLinkedin,
+} from "react-icons/fa";
 
 import profilePicture from "../../assets/profile-picture.png";
 
@@ -29,7 +31,7 @@ function Hero() {
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-black dark:text-white">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Aditya Kumar
@@ -58,9 +60,9 @@ function Hero() {
               <a
                 href="/resume.pdf"
                 download
-                className="px-6 py-3 rounded-xl border border-slate-700 flex items-center gap-2"
+                className="px-6 py-3 rounded-xl border border-slate-700 flex bg-slate-800 dark:bg-slate-300 items-center gap-2"
               >
-                <FiDownload />
+                <FaDownload />
                 Resume
               </a>
 
@@ -77,28 +79,28 @@ function Hero() {
                 href="https://github.com/adityatechspace"
                 className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition"
               >
-                <FiGithub />
+                <FaGithub />
               </a>
 
               <a
                 href="https://www.linkedin.com/in/go-on-adityakumar"
-                className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition"
+                className="w-12 h-12 rounded-xl border border-blue-500 flex items-center justify-center hover:border-blue-400 transition text-blue-600"
               >
-                <FiLinkedin />
+                <FaLinkedin />
               </a>
 
               <a
                 href="mailto:adityaproinfo@gmail.com"
                 className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition"
               >
-                <FiMail />
+                <FaEnvelope />
               </a>
 
               <a
                 href="https://adityatechspace.github.io/"
                 className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition"
               >
-                <FiGlobe />
+                <FaGlobe />
               </a>
             </div>
           </div>

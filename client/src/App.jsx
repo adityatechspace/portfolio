@@ -16,7 +16,20 @@ import FloatingAIButton from "./components/chatbot/FloatingAIButton";
 
 function App() {
   return (
-    <div className="app-background min-h-screen text-white">
+    <div
+  className="
+    app-background
+    min-h-screen
+    bg-white
+    text-slate-900
+
+    dark:bg-slate-950
+    dark:text-white
+
+    transition-colors
+    duration-300
+  "
+>
       <Navbar />
       <Hero />
       <Counter />

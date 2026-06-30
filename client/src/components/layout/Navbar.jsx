@@ -18,7 +18,7 @@ function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-slate-800 bg-slate-950/80">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white dark:bg-slate-950/80">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold">
@@ -35,7 +35,7 @@ function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-              className="text-sm text-slate-300 hover:text-white transition"
+              className="text-sm text-slate-800 dark:text-slate-300 hover:text-black dark:hover:text-white transition"
             >
               {item}
             </a>
