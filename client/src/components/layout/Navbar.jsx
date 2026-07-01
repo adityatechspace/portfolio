@@ -30,7 +30,7 @@ function Navbar() {
           </h1>
         </div>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="font-bold hidden lg:flex items-center gap-8">
           {navLinks.map((item) => (
             <a
               key={item}

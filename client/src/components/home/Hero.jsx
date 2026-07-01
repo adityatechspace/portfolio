@@ -22,11 +22,11 @@ function Hero() {
           {/* Left Content */}
           <div>
             <div className="flex flex-wrap gap-3 mb-8">
-              <span className="px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-sm text-blue-300">
+              <span className="px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-sm text-blue-400 dark:text-blue-300">
                 🚀 Available for Opportunities
               </span>
 
-              <span className="px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-sm text-purple-300">
+              <span className="px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-sm text-purple-400 dark:text-purple-300">
                 🤖 AI Portfolio Assistant Available
               </span>
             </div>
@@ -38,7 +38,7 @@ function Hero() {
               </span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-slate-300 mb-6">
+            <h2 className="text-xl md:text-2xl text-black dark:text-slate-300 mb-6">
               Software Engineer · AI Developer · Full Stack Developer
             </h2>
 
@@ -60,7 +60,7 @@ function Hero() {
               <a
                 href="/resume.pdf"
                 download
-                className="px-6 py-3 rounded-xl border border-slate-700 flex bg-slate-800 dark:bg-slate-300 items-center gap-2"
+                className="px-6 py-3 rounded-xl border border-slate-700 flex bg-slate-800 items-center gap-2"
               >
                 <FaDownload />
                 Resume
@@ -77,7 +77,7 @@ function Hero() {
             <div className="flex gap-4">
               <a
                 href="https://github.com/adityatechspace"
-                className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition"
+                className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition text-white bg-black"
               >
                 <FaGithub />
               </a>
@@ -91,14 +91,14 @@ function Hero() {
 
               <a
                 href="mailto:adityaproinfo@gmail.com"
-                className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition"
+                className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition bg-red-800"
               >
                 <FaEnvelope />
               </a>
 
               <a
                 href="https://adityatechspace.github.io/"
-                className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition"
+                className="w-12 h-12 rounded-xl border border-slate-700 flex items-center justify-center hover:border-blue-500 transition bg-blue-600"
               >
                 <FaGlobe />
               </a>

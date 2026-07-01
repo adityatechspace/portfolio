@@ -18,7 +18,7 @@ function ChatInput({
     }
   }}
         placeholder="Ask about my portfolio..."
-        className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 outline-none"
+        className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 outline-none text-slate-50 dark:text-black"
       />
 
       <button
