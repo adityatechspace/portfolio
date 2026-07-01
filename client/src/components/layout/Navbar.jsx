@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   FiMoon,
   FiSun,
@@ -12,6 +12,7 @@ import { useTheme } from "../../context/ThemeContext";
 function Navbar() {
   const { darkMode, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [highlightAI, setHighlightAI] = useState(false);
 
   const navLinks = [
     "About",
@@ -21,6 +22,19 @@ function Navbar() {
     "Education",
     "Contact",
   ];
+
+  useEffect(() => {
+  const hasSeenHint = localStorage.getItem("seen-ai-hint");
+
+  if (!hasSeenHint) {
+    setHighlightAI(true);
+
+    setTimeout(() => {
+      setHighlightAI(false);
+      localStorage.setItem("seen-ai-hint", "true");
+    }, 6000);
+  }
+}, []);
 
   return (
     <>
@@ -65,12 +79,22 @@ function Navbar() {
 
               {/* AI Assistant */}
               <a
-                href="#ai-assistant"
-                className="group flex items-center gap-2 rounded-full border border-violet-500/30 bg-gradient-to-r from-violet-500/10 to-blue-500/10 px-4 py-2 text-sm font-medium text-violet-300 transition-all duration-300 hover:scale-105 hover:border-violet-400 hover:shadow-lg hover:shadow-violet-500/20"
-              >
-                <BsStars className="animate-pulse" />
-                AI Assistant
-              </a>
+  href="#ai-assistant"
+  className={`group relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-500
+  ${
+    highlightAI
+      ? "border border-violet-400 bg-gradient-to-r from-violet-500/20 to-blue-500/20 text-violet-200 shadow-lg shadow-violet-500/30 animate-pulse"
+      : "border border-violet-500/30 bg-gradient-to-r from-violet-500/10 to-blue-500/10 text-violet-300 hover:scale-105 hover:border-violet-400 hover:shadow-lg hover:shadow-violet-500/20"
+  }`}
+>
+  ✨ AI Assistant
+
+  {highlightAI && (
+    <span className="absolute -bottom-12 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white shadow-xl">
+      👋 Try my AI Portfolio Assistant
+    </span>
+  )}
+</a>
 
             </nav>
 

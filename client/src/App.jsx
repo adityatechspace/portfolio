@@ -12,8 +12,6 @@ import Certifications from "./components/certifications/Certifications";
 import Education from "./components/education/Education";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/layout/Footer";
-import FloatingAIButton from "./components/chatbot/FloatingAIButton";
-
 function App() {
   return (
     <div
@@ -44,7 +42,6 @@ function App() {
       <Education />
       <Contact />
       <Footer />
-      <FloatingAIButton />
     </div>
   );
 }
