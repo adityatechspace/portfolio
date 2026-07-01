@@ -1,87 +1,154 @@
 import { useState } from "react";
-import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
+import {
+  FiMoon,
+  FiSun,
+  FiMenu,
+  FiX,
+  FiDownload,
+} from "react-icons/fi";
+import { BsStars } from "react-icons/bs";
 import { useTheme } from "../../context/ThemeContext";
 
 function Navbar() {
   const { darkMode, toggleTheme } = useTheme();
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
     "About",
     "Skills",
     "Projects",
-    "AI Assistant",
     "Experience",
     "Education",
     "Contact",
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white dark:bg-slate-950/80">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold">
-            AK
-          </div>
+    <>
+      <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
 
-          <h1 className="font-semibold text-lg">
-            Aditya Kumar
-          </h1>
-        </div>
+        <div className="rounded-2xl border border-slate-800 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-xl">
 
-        <nav className="font-bold hidden lg:flex items-center gap-8">
-          {navLinks.map((item) => (
+          <div className="px-6 h-20 flex items-center justify-between">
+
+            {/* Logo */}
             <a
-              key={item}
-              href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-              className="text-sm text-slate-800 dark:text-slate-300 hover:text-black dark:hover:text-white transition"
+              href="#home"
+              className="flex items-center gap-3"
             >
-              {item}
+              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20">
+                AK
+              </div>
+
+              <div className="hidden sm:block">
+                <h1 className="font-semibold text-black dark:text-white">
+                  Aditya Kumar
+                </h1>
+
+                <p className="text-xs text-slate-500">
+                  AI Engineer
+                </p>
+              </div>
             </a>
-          ))}
-        </nav>
 
-        <div className="flex items-center gap-3">
-          <button
-            onClick={toggleTheme}
-            className="w-10 h-10 rounded-xl border border-slate-700 flex items-center justify-center"
-          >
-            {darkMode ? <FiSun /> : <FiMoon />}
-          </button>
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex items-center gap-7">
 
-          <a
-            href="#contact"
-            className="hidden md:flex px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-sm font-medium"
-          >
-            Let's Talk
-          </a>
+              {navLinks.map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
+                  className="relative text-sm font-medium text-slate-700 dark:text-slate-300 transition hover:text-blue-500 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-500 after:transition-all hover:after:w-full"
+                >
+                  {item}
+                </a>
+              ))}
 
-          <button
-            className="lg:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {menuOpen && (
-        <div className="lg:hidden border-t border-slate-800 bg-slate-950">
-          <div className="flex flex-col p-6 gap-4">
-            {navLinks.map((item) => (
+              {/* AI Assistant */}
               <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-                onClick={() => setMenuOpen(false)}
+                href="#ai-assistant"
+                className="group flex items-center gap-2 rounded-full border border-violet-500/30 bg-gradient-to-r from-violet-500/10 to-blue-500/10 px-4 py-2 text-sm font-medium text-violet-300 transition-all duration-300 hover:scale-105 hover:border-violet-400 hover:shadow-lg hover:shadow-violet-500/20"
               >
-                {item}
+                <BsStars className="animate-pulse" />
+                AI Assistant
               </a>
-            ))}
+
+            </nav>
+
+            {/* Right */}
+            <div className="flex items-center gap-3">
+
+              {/* Resume */}
+              <a
+                href="/resume.pdf"
+                download
+                className="hidden md:flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/40 px-5 py-2 text-sm font-medium text-slate-200 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:text-white"
+              >
+                <FiDownload />
+                Resume
+              </a>
+
+              {/* Theme */}
+              <button
+                onClick={toggleTheme}
+                className="w-11 h-11 rounded-full border border-slate-700 bg-slate-900/40 backdrop-blur-md flex items-center justify-center transition hover:border-blue-500 hover:rotate-180 duration-500"
+              >
+                {darkMode ? <FiSun /> : <FiMoon />}
+              </button>
+
+              {/* Mobile Menu */}
+              <button
+                className="lg:hidden w-11 h-11 rounded-full border border-slate-700 flex items-center justify-center"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+              </button>
+
+            </div>
+
           </div>
+
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <div className="lg:hidden border-t border-slate-800">
+
+              <div className="flex flex-col gap-5 p-6">
+
+                {navLinks.map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-slate-300"
+                  >
+                    {item}
+                  </a>
+                ))}
+
+                <a
+                  href="#ai-assistant"
+                  className="rounded-xl border border-violet-500 bg-violet-500/10 px-4 py-3 text-violet-300"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  ✨ AI Assistant
+                </a>
+
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="rounded-xl border border-slate-700 px-4 py-3"
+                >
+                  ⬇ Download Resume
+                </a>
+
+              </div>
+
+            </div>
+          )}
+
         </div>
-      )}
-    </header>
+
+      </header>
+    </>
   );
 }
 
