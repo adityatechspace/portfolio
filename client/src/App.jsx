@@ -30,8 +30,8 @@ function App() {
 >
       <Navbar />
       <Hero />
-      <Counter />
       <About />
+      <Counter />
       <Skills />
       <Projects />
       <ChatBot />
