@@ -38,12 +38,10 @@ function Navbar() {
 
   return (
     <>
-      <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
+     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-6xl">
+  <div className="rounded-full border border-slate-800 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-xl">
 
-        <div className="rounded-2xl border border-slate-800 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-xl">
-
-          <div className="px-6 h-20 flex items-center justify-between">
-
+    <div className="px-1 py-1 h-15 flex items-center justify-between">
             {/* Logo */}
             <a
               href="#home"
