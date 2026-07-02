@@ -52,7 +52,7 @@ function Hero() {
   </h1>
 
   {/* Subtitle */}
-  <h2 className="max-w-xl text-2xl md:text-3xl font-semibold text-slate-200 leading-snug">
+  <h2 className="max-w-xl text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-200 leading-snug">
 
     Building AI-powered applications
     <br />

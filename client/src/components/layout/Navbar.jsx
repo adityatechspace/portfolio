@@ -23,6 +23,8 @@ function Navbar() {
     "Contact",
   ];
 
+
+
   useEffect(() => {
   const hasSeenHint = localStorage.getItem("seen-ai-hint");
 
@@ -39,6 +41,8 @@ function Navbar() {
   return (
     <>
      <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-6xl">
+         <div className="absolute bottom-20 h-[350px] w-[350px] rounded-full bg-blue-500/10 blur-[120px]"></div>
+
   <div className="rounded-full border border-slate-800 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-xl">
 
     <div className="px-1 py-1 h-15 flex items-center justify-between">
