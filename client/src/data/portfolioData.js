@@ -1,22 +1,31 @@
+import profilePicture from "../assets/profile-picture.png"
 const portfolioData = {
   // ==========================
   // PERSONAL INFORMATION
   // ==========================
 
   personal: {
-    name: "Aditya Kumar",
+    title: "Hi, I'm",
+
+    firstName: "Aditya",
+
+    secondName: "Kumar",
 
     role: "AI engineer",
 
-    tagline: "AI Operation",
+    subtitle: ["Building AI-powered applications", "that solve real-world problems.",],
 
-    bio: "AI engineer",
+    description: "Passionate about building intelligent software, automation tools, and scalable full-stack applications using modern AI technologies.",
+
+    availability: "Available for opportunity",
+
+    techStack: ["Python", "React", "Node.js", "FastAPI", "Gemini AI"],
 
     location: "Bengaluru, Karnataka-560064",
 
-    profileImage: "/profile.png",
+    profilePicture: profilePicture,
 
-    resume: "/resume.pdf"
+    button: ["Contact Me","View Projects"]
   },
 
   // ==========================
@@ -26,12 +35,16 @@ const portfolioData = {
   contact: {
     email: "adityaproinfo@gmail.com",
 
-    phone: "+91 8102256694",
-
-    availability: "",
-
-    timezone: ""
+    phone: "+91 8102256694"
   },
+
+   //==========================
+   // Documents
+   //==========================
+
+   document: {
+     resume: ""
+   },
 
   // ==========================
   // SOCIAL LINKS

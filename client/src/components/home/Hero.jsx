@@ -8,9 +8,9 @@ import {
     FaLinkedin,
 } from "react-icons/fa";
 
-import profilePicture from "../../assets/profile-picture.png";
+import portfolioData from "../../data/portfolioData" 
 
-function Hero() {
+function Hero(){ const {title, firstName, secondName, availability, role, subtitle, description, techStack = [], profilePicture, button } = portfolioData.personal;
   return (
     <section
       id="home"
@@ -28,64 +28,58 @@ function Hero() {
     <div className="absolute -left-40 top-20 h-[350px] w-[350px] rounded-full bg-blue-500/10 blur-[120px]"></div>
 
     <span className="text-sm font-medium text-emerald-300">
-      Available for AI Engineer Opportunities
+      {availability}
     </span>
   </div>
 
   {/* Heading */}
   <p className="text-lg text-slate-400 mb-2">
-    Hi, I'm
+    {title}
   </p>
 
   <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
 
     <span className="text-blue-400">
-      Aditya
+      {firstName}
     </span>
 
     <br />
 
     <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-      Kumar
+      {secondName}
     </span>
 
   </h1>
 
   {/* Subtitle */}
   <h2 className="max-w-xl text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-200 leading-snug">
-
-    Building AI-powered applications
+    {subtitle[0]}
     <br />
-    that solve real-world problems.
-
+    {subtitle[1]}
   </h2>
 
   {/* Description */}
   <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
 
-    Passionate about building intelligent software,
-    automation tools, and scalable full-stack applications
-    using modern AI technologies.
+{description}
 
   </p>
 
   {/* Tech Stack */}
   <div className="mt-8 flex flex-wrap gap-3">
 
-    {[
-      "Python",
-      "React",
-      "Node.js",
-      "FastAPI",
-      "Gemini AI",
-    ].map((tech) => (
-      <span
-        key={tech}
-        className="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm text-slate-300 backdrop-blur-md"
-      >
-        {tech}
-      </span>
-    ))}
+ 
+{/* Tech Stack */}
+<div className="mt-8 flex flex-wrap gap-3">
+  {techStack.map((tech) => (
+    <span
+      key={tech}
+      className="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm text-slate-300 backdrop-blur-md"
+    >
+      {tech}
+    </span>
+  ))}
+</div>
 
   </div>
 
@@ -96,14 +90,14 @@ function Hero() {
       href="#contact"
       className="rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 font-semibold text-white transition duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20"
     >
-      Contact Me
+      {button[0]}
     </a>
 
     <a
       href="#projects"
       className="group flex items-center gap-2 text-lg font-medium text-slate-300 transition hover:text-white"
     >
-      View Projects
+      {button[1]}
 
       <span className="transition-transform duration-300 group-hover:translate-x-2">
         →
